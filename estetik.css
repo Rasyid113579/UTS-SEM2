@@ -1,0 +1,354 @@
+#body{
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    background-image: url(gambar/UTAMA.png);
+    background-position:center;
+    background-size: 1500px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#atas {
+    width: 100%;
+    height: 10%;
+    margin-top: -5px;
+    margin-bottom: 20px;
+    background-color: rgba(18, 112, 76, 0.863);
+}
+#headers{
+    display: inline-flex;
+    font-weight: bold;
+    color: aliceblue;
+}
+#atas img{
+    height: 100px;
+    margin-bottom: -10px;
+}
+#submit{
+    margin-top: 2%;
+    margin-bottom: -21px;
+}
+#submit h2{
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+#profil{
+    margin-top: -5%;
+}
+#submit button{
+    font-weight: bold;
+    margin-top: 10px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+    padding: 7px 10px;
+    border-width: 3px;
+    background-color: aliceblue;
+}
+#submit button:hover{
+    background-color: darksalmon;
+}
+#choava{
+    height: 10px;
+    text-align: center;
+    font-weight: 800;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.ketik{
+    width: 30%;
+    margin-top: 5px;
+    background-color: rgba(233, 154, 79, 0.836);
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    border-radius: 10px;
+    padding: 5px 40px;
+}
+#ganti{
+    display: inline-block;
+    margin-top: 30px;
+    margin-bottom: -10px;
+}
+#ganti a{
+    text-decoration: none;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    background-color: black ;
+    color: rgb(255, 255, 255);
+    font-size: 30px; font-weight: bold;
+}
+#ganti img{
+    width: 50%;
+}
+#next{
+    border-radius: 10px;
+    cursor: pointer;
+}
+#prev{
+    border-radius: 10px;
+    cursor: pointer;
+}
+#next:hover{
+    background-color: rgb(0, 141, 12);
+}
+#prev:hover{
+    background-color: rgb(0, 141, 12);
+}
+#home{
+    margin-top: 40px;
+}
+#menu a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 70%;
+    padding: 1% 2%;
+    color: aliceblue;
+    border-radius: 10%;
+    background-color: rgb(129, 129, 129);
+}
+#ganti a{
+    cursor: pointer;
+}
+#greet{
+    margin-bottom: -10px;
+    font-size: 30px;
+    font-weight:900;
+}
+#musicbut{
+    padding: 0.7% 1.4%;
+    border-radius: 10px;
+    border-style: solid;
+    color: azure;
+    border-color: black;
+    border-width: 3px;
+    font-weight: bolder;
+    font-size: 20px;
+    margin-top: 35px;
+    margin-bottom: -420px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(255, 0, 0);
+    cursor: pointer;
+}
+#musicbut:hover{
+    background-color: rgba(118, 124, 32, 0.829);
+}
+#aktivitas{
+    position: relative;
+    cursor: pointer;
+    margin-left: 330px;
+}
+#aktivitas button{
+    background-color:rgb(167, 94, 0);
+    color: rgb(255, 255, 255);
+    border-color: black;
+}
+#aktivitas button:hover{
+    background-color: rgb(80, 191, 255);
+    color: rgb(255, 0, 0);
+}
+#DigitalClock{
+    margin-top: 13%;
+    font-size: 150%;
+    width: 15%;
+    font-weight: 900;
+    color: gold;
+    border-width: 10px;
+    border-radius: 10px;
+}
+#satu{
+    display: inline-flex;
+    margin-bottom: -10px;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+#satu button{
+    font-weight: bold;
+    font-size: 100%;
+    border-radius: 10px;
+    border-width: 4px;
+}
+#dua{
+    display: inline-flex;
+}
+#dua button{
+    font-weight: bold;
+    font-size: 100%;
+    border-radius: 10px;
+    border-width: 4px;
+}
+#makan button{
+    margin-left: 2%;
+    margin-right: 20px;
+    width: 150px;
+}
+#main button{
+    margin-left: 2%;
+    margin-right: 10px;
+    width: 150px;
+}
+#tidur button{
+    margin-left: 2%;
+    width: 150px;
+}
+#belajar button{
+    width: 150px;
+    margin-left: 8%;
+}
+#bar{
+    width: 400px;
+    margin-left: 52%;
+    margin-right: 20%;
+    margin-bottom: 70px;
+    border-radius: 10px;
+}
+#barbelajar{
+    margin-left: -5px;
+}
+#barmakan{
+    margin-left: -5px;
+}
+#bartidur{
+    margin-left: -5px;
+}
+#barmain{
+    margin-left: -5px;
+}
+#bar i{
+    color: aliceblue;
+}
+#semes{
+    margin-left: 5px;
+    margin-top: 0px;
+    border-radius: 10px;
+    padding-bottom: 10px;
+}
+.progressbarWrapper {
+    height: 30px;
+    width: 450px;
+    max-width: 80%;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    position: relative;
+    background: #555;
+    padding: 3px;
+    box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+}  
+#greenBar {
+    display: block;
+    height: 100%;
+    width: 50%;
+    background-color: rgb(43, 194, 83);
+    background-image: linear-gradient(
+      center bottom,
+      rgb(43, 194, 83) 37%,
+      rgb(84, 240, 84) 69%
+    );
+    position: relative;
+    overflow: hidden;
+    font-size: 15px;
+    text-align: center;
+    color: white;
+    transition: all 700ms ease;
+}
+.progressbarWrapper2 {
+    height: 30px;
+    width: 450px;
+    max-width: 80%;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    position: relative;
+    background: #555;
+    padding: 3px;
+    box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+}
+#greenBar2 {
+    display: block;
+    height: 100%;
+    width: 50%;
+    background-color: rgb(43, 194, 83);
+    background-image: linear-gradient(
+      center bottom,
+      rgb(43, 194, 83) 37%,
+      rgb(84, 240, 84) 69%
+    );
+    position: relative;
+    overflow: hidden;
+    font-size: 15px;
+    text-align: center;
+    color: white;
+    transition: all 700ms ease;
+}
+.progressbarWrapper3 {
+    height: 30px;
+    width: 450px;
+    max-width: 80%;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    position: relative;
+    background: #555;
+    padding: 3px;
+    box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+}
+
+#greenBar3 {
+    display: block;
+    height: 100%;
+    width: 50%;
+    background-color: rgb(43, 194, 83);
+    background-image: linear-gradient(
+      center bottom,
+      rgb(43, 194, 83) 37%,
+      rgb(84, 240, 84) 69%
+    );
+    position: relative;
+    overflow: hidden;
+    font-size: 15px;
+    text-align: center;
+    color: white;
+    transition: all 700ms ease;
+}
+
+.progressbarWrapper4 {
+    height: 30px;
+    width: 450px;
+    max-width: 80%;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    position: relative;
+    background: #555;
+    padding: 3px;
+    box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+}
+
+#greenBar4 {
+    display: block;
+    height: 100%;
+    width: 0px;
+    background-color: rgb(43, 194, 83);
+    background-image: linear-gradient(
+      center bottom,
+      rgb(43, 194, 83) 37%,
+      rgb(84, 240, 84) 69%
+    );
+    position: relative;
+    overflow: hidden;
+    font-size: 15px;
+    text-align: center;
+    color: white;
+    transition: all 700ms ease;
+} 
+
+button {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    border: none;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    cursor: pointer;
+}

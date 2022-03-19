@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kelompok-07</title>
+        <link rel="stylesheet" href="estetik.css"/>
+        <link rel="stylesheet" href="DigStyle.css"/>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style/fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="style/style.css">
+    </head>
+    <body id="body">
+        <audio id="myaudio">
+            <source src="lagu.mp3"  type="audio/mpeg">
+        </audio>
+        <audio id="efgan">
+            <source src="ML.m4a"  type="audio/mpeg">
+        </audio>
+        <div id="atas">
+            <div id="headers">
+                <div>
+                    <h2 style="margin-left: -90%; margin-top: 27%;">MID EXAM</h2>
+                </div>
+                <div>
+                    <img src="gambar/piala.png">
+                </div>
+                <div>
+                    <h2 style="margin-right: -90%; margin-top: 27%;">MID EXAM</h2>
+                </div>
+            </div>
+            <div>
+                <hr style="padding: 0.4%; background-color: rgb(255, 0, 0);"/>
+            </div>
+        </div>
+        <div id="home" >
+            <div id="temp" style="margin-bottom: 8%;"></div>
+            <div id="profil">
+                <div>
+                    <p id="greet"></p>
+                    <h1 id="choava">Choose Your Avatar</h1>
+                </div>
+                <table id="ganti">
+                    <tr>
+                        <td>
+                            <a style="margin-right: -50%;" onclick="picChange1()" id="prev">&#8249;</a>
+                        </td>
+                        <td colspan="3">
+                            <img id="charac" src="gambar/cewe.png" id="gambar">
+                        </td>
+                        <td>
+                            <a style="margin-left: -50%;" onclick="picChange2()" id="next">&#8250;</a>
+                        </td>
+                    </tr>
+                </table>
+                <div id="DigitalClock" class="clock"></div>
+            </div>
+            <div id="bar">
+                <div id="barmakan"><i class="fa fa-hamburger"></i><div class="progressbarWrapper" ><span id="greenBar"></span></div></div>
+                <div id="barmain"><i class="fa fa-gamepad"></i><div class="progressbarWrapper2"><span id="greenBar2"></span></div></div>
+                <div id="bartidur"><i class="fa fa-bed"></i><div class="progressbarWrapper3"><span id="greenBar3"></span></div></div>
+                <div id="barbelajar"><i class="fa fa-book"></i><div class="progressbarWrapper4"><span id="greenBar4"></span></div></div>
+            </div>
+            <div id="submit">
+                <div>
+                    <h2>Enter your name here..</h2>
+                </div>
+                <div>
+                    <input class="ketik" type="text" name="nama" id="nama">
+                </div>
+                <div>
+                    <button type="submit" id="playbtn" onclick="greet(); Proses(); musicON();">PLAY</button>
+                </div>
+            </div>
+            </form>
+        </div>
+        <div id="aktivitas">
+            <div id="satu">
+                <div id="makan"><button id="btn1" onclick="before();"><i class="fa fa-hamburger"></i>&nbsp;MAKAN</button></div>
+                <div id="tidur"><button id="btn3" onclick="after();"><i class="fa fa-bed"></i>&nbsp;TIDUR</button></div>
+            </div><br>
+            <div id="dua">
+                <div id="main"><button id="btn2" onclick="one();"><i class="fa fa-gamepad"></i>&nbsp;MAIN</button></div>
+                <div id="belajar"><button id="btn4" onclick="two();"><i class="fa fa-book"></i>&nbsp;BELAJAR</button></div>
+            </div>
+        </div>
+    </body>
+    <script src="dist/sweetalert2.all.min.js"></script>
+    <script src="javajs.js"></script>
+    <script>
+        let Clock;
+        var music = document.getElementById("myaudio"); 
+        var effect = document.getElementById("efgan"); 
+        document.getElementById("bar").style.display="none";
+        document.getElementById("aktivitas").style.display="none";
+        function greet(){
+            var h = 0;
+            var m = 0;
+            document.getElementById("bar").style.display="block";
+            document.getElementById("aktivitas").style.display="block";
+            var Name = document.getElementById('nama').value;
+            Clock = setInterval (function(){
+                m = m + 20;
+                if(m == 60){
+                    h = h + 1;
+                    m = 0;
+                }
+
+                if(h >= 24){
+                    h = 0;
+                }
+                    
+                hour = (h < 10) ? "0" + h : h;
+                minute = (m < 10) ? "0" + m : m;
+                
+                if(h>=0 && h<=12){
+                    if(Name == ""){
+                        var greeting = "Good Morning " + "Anonim";
+                    }
+                    else{
+                        var greeting = "Good Morning " + Name;
+                    }
+                } else if(h>12 && h<=17){
+                    if(Name == ""){
+                        var greeting = "Good Evening " + "Anonim";
+                    }
+                    else{
+                        var greeting = "Good Evening " + Name;
+                    }
+                } else if(h>17 && h<=24){
+                    if(Name == ""){
+                        var greeting = "Good Night " + "Anonim";
+                    }
+                    else{
+                        var greeting = "Good Night " + Name;
+                    }
+                }
+                document.getElementById("greet").innerHTML=greeting;
+                if(h>=0 && h<=12){
+                    document.getElementById("body").style.backgroundImage="url('gambar/pagi.jpg')";
+                    document.getElementById("greet").style.color="black";
+                    document.getElementById("DigitalClock").style.backgroundColor="darkslategray";
+                    document.getElementById("DigitalClock").style.color="orange";
+                } else if(h>12 && h<=17){
+                    document.getElementById("body").style.backgroundImage="url('gambar/siang3.jpg')";
+                    document.getElementById("greet").style.color="black";
+                    document.getElementById("DigitalClock").style.backgroundColor="orange";
+                    document.getElementById("DigitalClock").style.color="blue";
+                } else if(h>17 && h<=24){
+                    document.getElementById("body").style.backgroundImage="url('gambar/malam1.jpg')";
+                    document.getElementById("greet").style.color="orange";
+                    document.getElementById("DigitalClock").style.backgroundColor="orange";
+                    document.getElementById("DigitalClock").style.color="blue";
+                }
+
+                var time = hour + ":" + minute;
+                document.getElementById("DigitalClock").innerText = time;
+                document.getElementById("DigitalClock").textContent = time;
+            }, 1000); 
+        }
+        function picChange1(){
+            document.getElementById('charac').src="gambar/cowo4.png";
+            effect.play();
+            setTimeout(function(){
+                effect.pause();
+            }, 1100);
+            effect.volume= 0.2;
+        }
+        function picChange2(){
+            document.getElementById('charac').src="gambar/cewe.png";
+            effect.play();
+            setTimeout(function(){
+                effect.pause();
+            }, 1100);
+            effect.volume= 0.2;
+        }
+        function Proses(){
+            document.getElementById('profil').innerHTML += '<button id="musicbut" onclick="musicOFF();">SOUND OFF</button>';
+            document.getElementById('bar').innerHTML += '<h1 id="semes">SEMESTER 1</h1>';
+            document.getElementById("profil").style.transform = "scale(0.7)";
+            document.getElementById("profil").style.transformOrigin = "0 0";
+            document.getElementById("profil").style.transition = "all 5s";
+            document.getElementById("profil").style.marginLeft="0%";
+            document.getElementById("profil").style.marginTop="20px";
+            document.getElementById("profil").style.transform = "scale(0.7)";
+            document.getElementById("aktivitas").style.transform = "scale(1)";
+            document.getElementById("aktivitas").style.marginTop="-80px";
+            document.getElementById("aktivitas").style.transition = "all 5s";
+            document.getElementById("bar").style.marginTop="-300px";
+            document.getElementById("bar").style.padding="7px 13px 0px";
+            document.getElementById("bar").style.backgroundColor="coral";
+            document.getElementById("home").style.marginLeft="-120px";
+            document.getElementById("DigitalClock").style.marginTop="100px";
+            document.getElementById("DigitalClock").style.padding="10px 5px";
+            var element1 = document.getElementById("next");
+                element1.parentNode.removeChild(element1);
+            var element2 = document.getElementById("prev");
+                element2.parentNode.removeChild(element2);
+            var element3 = document.getElementById("submit");
+                element3.parentNode.removeChild(element3);
+            var element4 = document.getElementById("temp");
+                element4.parentNode.removeChild(element4);
+            var element5 = document.getElementById("choava");
+                element5.parentNode.removeChild(element5);
+            music.play();
+            music.loop = true;
+            music.volume = 0.2;
+        }
+        function musicOFF(){
+            music.pause();
+        }
+        function before(){
+            document.getElementById('charac').src="gambar/eat.png";
+        }
+        function after(){
+            document.getElementById('charac').src="gambar/sleeping.png";
+        }
+        function one(){
+            document.getElementById('charac').src="gambar/playtime.png";
+        }
+        function two(){
+            document.getElementById('charac').src="gambar/studying.png";
+        }
+    </script>
+</html>
